@@ -67,7 +67,7 @@ const AccordionItem = ({title, answer, id, isOpen, onClick}) => {
           {title}
          
           <img
-            data-testId="heading-icon"
+            data-testid="heading-icon"
             src={isOpen ? IconMinus : IconPlus } 
             alt=""
             aria-hidden="true"
@@ -76,6 +76,7 @@ const AccordionItem = ({title, answer, id, isOpen, onClick}) => {
       </h2>
         {isOpen && 
           <motion.p
+            data-testid="answer"
             initial={{
               opacity: 0,
               scaleY: 0,

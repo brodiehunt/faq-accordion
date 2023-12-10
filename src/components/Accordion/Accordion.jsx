@@ -2,7 +2,7 @@ import {useState} from 'react';
 import IconStar from '../../assets/icon-star.svg';
 import AccordionItem from './AccordionItem.jsx';
 import styled from 'styled-components';
-import {motion, AnimatePresence} from 'framer-motion';
+
 
 const accordionContent = [
   { 
@@ -33,7 +33,7 @@ const accordionContent = [
   },
 ];
  
-const AccordionContainer = styled(motion.section)`
+const AccordionContainer = styled.section`
   margin-top: 9rem;
   position: relative;
   z-index: 1;
@@ -97,6 +97,7 @@ const Accordion = () => {
     <AccordionContainer >
       <header>
         <img 
+          data-testid="heading-icon-star"
           src={IconStar} 
           alt=""
           aria-hidden="true"
