@@ -1,10 +1,11 @@
+import Accordion from './components/Accordion/Accordion.jsx';
 
 function App() {
   
 
   return (
     <>
-      <h1>Hello World</h1>
+      <Accordion />
     </>
   )
 }
