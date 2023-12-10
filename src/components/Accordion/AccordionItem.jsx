@@ -1,7 +1,7 @@
 import IconPlus from '../../assets/icon-plus.svg';
 import IconMinus from '../../assets/icon-minus.svg';
 import styled from 'styled-components';
-import {motion, AnimatePresence} from 'framer-motion';
+import {motion} from 'framer-motion';
 
 const AccordionArticle = styled(motion.article)`
   
@@ -67,6 +67,7 @@ const AccordionItem = ({title, answer, id, isOpen, onClick}) => {
           {title}
          
           <img
+            data-testId="heading-icon"
             src={isOpen ? IconMinus : IconPlus } 
             alt=""
             aria-hidden="true"

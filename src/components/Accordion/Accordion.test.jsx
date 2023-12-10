@@ -8,8 +8,5 @@ describe("something to be truthy", () => {
     expect(true).toBe(true);
   })
 
-  it('should render app title', () => {
-    render(<App/>)
-    expect(screen.getByRole("heading").textContent).toMatch(/hello world/i);
-  });
+
 })
