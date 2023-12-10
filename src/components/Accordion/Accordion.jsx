@@ -1,6 +1,8 @@
 import {useState} from 'react';
 import IconStar from '../../assets/icon-star.svg';
 import AccordionItem from './AccordionItem.jsx';
+import styled from 'styled-components';
+import {motion, AnimatePresence} from 'framer-motion';
 
 const accordionContent = [
   { 
@@ -31,6 +33,40 @@ const accordionContent = [
   },
 ];
  
+const AccordionContainer = styled(motion.section)`
+  margin-top: 9rem;
+  position: relative;
+  z-index: 1;
+  width: calc(100% - 3rem);
+  max-width: 600px;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0px 32px 56px 0px rgba(80, 0, 118, 0.10);
+
+  header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .header-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+
+  @media (min-width: 768px) {
+    margin-top: 10.5rem;
+    padding: 2.5rem;
+  }
+`
 
 const Accordion = () => {
   const [indexOpen, setIndexOpen] = useState(null);
@@ -58,17 +94,18 @@ const Accordion = () => {
   })
 
   return (
-    <section>
+    <AccordionContainer >
       <header>
         <img 
           src={IconStar} 
           alt=""
           aria-hidden="true"
+          className="header-icon"
         />
         <h1>FAQs</h1>
       </header>
       {accordionItems}
-    </section>
+    </AccordionContainer>
   )
 
 }
