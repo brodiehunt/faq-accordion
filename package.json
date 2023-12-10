@@ -1,5 +1,5 @@
 {
-  "homepage": "https://brodiehunt.github.io/faq-accordion",
+  "homepage": "https://brodiehunt.github.io/faq-accordion/",
   "name": "faq-accordion",
   "private": true,
   "version": "0.0.0",
@@ -9,7 +9,7 @@
     "test": "vitest",
     "build": "vite build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
